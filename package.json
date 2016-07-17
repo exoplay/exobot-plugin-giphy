@@ -1,0 +1,35 @@
+{
+  "name": "exobot-plugin-giphy",
+  "version": "0.0.1",
+  "description": "exobot plugin for gifs from giphy",
+  "main": "index.js",
+  "scripts": {
+    "test": "blueprints -t",
+    "build": "blueprints -p",
+    "watch": "blueprints -p -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exoplay/exobot-plugin-giphy.git"
+  },
+  "keywords": [
+    "exobot",
+    "chat",
+    "bot",
+    "plugin",
+    "giphy",
+    "gifs"
+  ],
+  "author": "Jack Lawson <ajacksified@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/exoplay/exobot-plugin-giphy/issues"
+  },
+  "homepage": "https://github.com/exoplay/exobot-plugin-giphy#readme",
+  "peerDependencies": {
+    "@exoplay/exobot": "~1.0.0"
+  },
+  "dependencies": {
+    "@r/build": "git://github.com/ajacksified/node-build#679c3f3d47c0916237d55128ece4cc817b489ef8"
+  }
+}
