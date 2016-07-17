@@ -1,5 +1,5 @@
 {
-  "name": "exobot-plugin-giphy",
+  "name": "@exoplay/exobot-plugin-giphy",
   "version": "0.0.1",
   "description": "exobot plugin for gifs from giphy",
   "main": "index.js",
