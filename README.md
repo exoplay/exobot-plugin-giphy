@@ -30,4 +30,4 @@ Go create a Giphy API Key at http://api.giphy.com/submit.
 
 ## License
 
-MIT licensed. Copyright 2016 Exoplay, LLC. See LICENSE file for more details.
+LGPL licensed. Copyright 2016 Exoplay, LLC. See LICENSE file for more details.

@@ -1,6 +1,6 @@
 {
   "name": "@exoplay/exobot-plugin-giphy",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "exobot plugin for gifs from giphy",
   "main": "giphy.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "gifs"
   ],
   "author": "Jack Lawson <ajacksified@gmail.com>",
-  "license": "MIT",
+  "license": "LGPL",
   "bugs": {
     "url": "https://github.com/exoplay/exobot-plugin-giphy/issues"
   },
