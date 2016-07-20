@@ -1,6 +1,6 @@
 {
   "name": "@exoplay/exobot-plugin-giphy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "exobot plugin for gifs from giphy",
   "main": "giphy.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/exoplay/exobot-plugin-giphy#readme",
   "peerDependencies": {
-    "@exoplay/exobot": "~1.0.0"
+    "@exoplay/exobot": "1.x"
   },
   "dependencies": {
     "@r/build": "git://github.com/ajacksified/node-build#679c3f3d47c0916237d55128ece4cc817b489ef8"
