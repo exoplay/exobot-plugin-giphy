@@ -1,4 +1,4 @@
-import { ChatPlugin } from '@exoplay/exobot';
+import { ChatPlugin, respond, help, permissionGroup } from '@exoplay/exobot';
 
 export const ENDPOINT = 'http://api.giphy.com/v1/gifs/search';
 
@@ -8,7 +8,6 @@ export class Giphy extends ChatPlugin {
   constructor (options={}) {
     const { apiKey } = options;
     super(...arguments);
-    this.respond(/^(?:gif|giphy)(?:\sme)?\s+(.*)/i, this.giphy);
 
     this.apiKey = apiKey;
   }
@@ -21,6 +20,9 @@ export class Giphy extends ChatPlugin {
     }
   }
 
+  @permissionGroup('gif');
+  @help('/gif <search> to search giphy for a gif');
+  @respond(/^(?:gif|giphy)(?:\sme)?\s+(.*)/i);
   async giphy ([, search]) {
     try {
       const { body } = await this.bot.http.get(ENDPOINT)
