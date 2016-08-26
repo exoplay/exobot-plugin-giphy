@@ -3,7 +3,7 @@ import { ChatPlugin, respond, help, permissionGroup } from '@exoplay/exobot';
 export const ENDPOINT = 'http://api.giphy.com/v1/gifs/search';
 
 export class Giphy extends ChatPlugin {
-  help = 'Help: Explains commands. Say "<botname> help" for information.';
+  name = 'giphy';
 
   constructor (options={}) {
     const { apiKey } = options;
