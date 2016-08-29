@@ -1,10 +1,11 @@
 {
   "name": "@exoplay/exobot-plugin-giphy",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "exobot plugin for gifs from giphy",
   "main": "giphy.js",
   "scripts": {
     "build": "exobot-build",
+    "try": "exobot-try",
     "watch": "exobot-build --watch"
   },
   "repository": {
@@ -29,6 +30,6 @@
     "@exoplay/exobot": "2.x"
   },
   "devDependencies": {
-    "@exoplay/exobot": "^2.2.1"
+    "@exoplay/exobot": "^2.3.0"
   }
 }
