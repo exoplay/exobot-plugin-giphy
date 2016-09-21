@@ -1,24 +1,13 @@
-import { ChatPlugin, respond, help, permissionGroup } from '@exoplay/exobot';
+import { ChatPlugin, respond, help, permissionGroup, PropTypes as T } from '@exoplay/exobot';
 
 export const ENDPOINT = 'http://api.giphy.com/v1/gifs/search';
 
 export class Giphy extends ChatPlugin {
   name = 'giphy';
 
-  constructor (options={}) {
-    const { apiKey } = options;
-    super(...arguments);
-
-    this.apiKey = apiKey;
-  }
-
-  register (bot) {
-    super.register(...arguments);
-
-    if (!this.apiKey) {
-      bot.log.critical('No apiKey passed to Giphy plugin; plugin will not work.');
-    }
-  }
+  propTypes = {
+    apiKey: T.string.isRequired,
+  };
 
   @permissionGroup('gif');
   @help('/gif <search> to search giphy for a gif');
@@ -26,7 +15,7 @@ export class Giphy extends ChatPlugin {
   async giphy ([, search]) {
     try {
       const { body } = await this.bot.http.get(ENDPOINT)
-                     .query({ q: search, api_key: this.apiKey });
+                     .query({ q: search, api_key: this.options.apiKey });
 
       const { data } = body;
 
