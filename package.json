@@ -1,12 +1,11 @@
 {
   "name": "@exoplay/exobot-plugin-giphy",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "exobot plugin for gifs from giphy",
   "main": "giphy.js",
   "scripts": {
-    "build": "exobot-build",
-    "try": "exobot-try",
-    "watch": "exobot-build --watch"
+    "build": "exobot build -i src/giphy.js -o giphy.js",
+    "watch": "exobot build --watch -i src/giphy.js -o giphy.js"
   },
   "repository": {
     "type": "git",
@@ -27,9 +26,12 @@
   },
   "homepage": "https://github.com/exoplay/exobot-plugin-giphy#readme",
   "peerDependencies": {
-    "@exoplay/exobot": "3.x"
+    "@exoplay/exobot": "4.x"
   },
   "devDependencies": {
-    "@exoplay/exobot": "3.x"
+    "@exoplay/exobot": "4.x"
+  },
+  "dependencies": {
+    "@exoplay/exobot-build": "^0.2.1"
   }
 }

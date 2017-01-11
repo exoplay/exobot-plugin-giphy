@@ -3,9 +3,9 @@ import { ChatPlugin, respond, help, permissionGroup, PropTypes as T } from '@exo
 export const ENDPOINT = 'http://api.giphy.com/v1/gifs/search';
 
 export class Giphy extends ChatPlugin {
-  name = 'giphy';
+  static type = 'giphy';
 
-  propTypes = {
+  static propTypes = {
     apiKey: T.string.isRequired,
   };
 

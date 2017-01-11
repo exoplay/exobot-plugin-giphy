@@ -1,3 +1,173 @@
-require("source-map-support").install();
-!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t(require("@exoplay/exobot")):"function"==typeof define&&define.amd?define(["@exoplay/exobot"],t):"object"==typeof exports?exports["giphy.js"]=t(require("@exoplay/exobot")):e["giphy.js"]=t(e["@exoplay/exobot"])}(this,function(e){return function(e){function t(n){if(r[n])return r[n].exports;var o=r[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,t),o.l=!0,o.exports}var r={};return t.m=e,t.c=r,t.i=function(e){return e},t.d=function(e,t,r){Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var r=e&&e.__esModule?function(){return e["default"]}:function(){return e};return t.d(r,"a",r),r},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=1)}([function(e,t){e.exports=require("@exoplay/exobot")},function(e,t,r){"use strict";function n(e){return function(){var t=e.apply(this,arguments);return new Promise(function(e,r){function n(o,i){try{var u=t[o](i),a=u.value}catch(p){return void r(p)}return u.done?void e(a):Promise.resolve(a).then(function(e){return n("next",e)},function(e){return n("throw",e)})}return n("next")})}}function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function u(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}function a(e,t,r,n,o){var i={};return Object.keys(n).forEach(function(e){i[e]=n[e]}),i.enumerable=!!i.enumerable,i.configurable=!!i.configurable,("value"in i||i.initializer)&&(i.writable=!0),i=r.slice().reverse().reduce(function(r,n){return n(e,t,r)||r},i),o&&void 0!==i.initializer&&(i.value=i.initializer?i.initializer.call(o):void 0,i.initializer=void 0),void 0===i.initializer&&(Object.defineProperty(e,t,i),i=null),i}var p=r(0);r.n(p);r.d(t,"ENDPOINT",function(){return v}),r.d(t,"Giphy",function(){return g});var c,f,l,s,y=function(){function e(e,t){var r=[],n=!0,o=!1,i=void 0;try{for(var u,a=e[Symbol.iterator]();!(n=(u=a.next()).done)&&(r.push(u.value),!t||r.length!==t);n=!0);}catch(p){o=!0,i=p}finally{try{!n&&a["return"]&&a["return"]()}finally{if(o)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),h=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),b=function d(e,t,r){null===e&&(e=Function.prototype);var n=Object.getOwnPropertyDescriptor(e,t);if(void 0===n){var o=Object.getPrototypeOf(e);return null===o?void 0:d(o,t,r)}if("value"in n)return n.value;var i=n.get;if(void 0!==i)return i.call(r)},v="http://api.giphy.com/v1/gifs/search",g=(c=r.i(p.permissionGroup)("gif"),f=r.i(p.help)("/gif <search> to search giphy for a gif"),l=r.i(p.respond)(/^(?:gif|giphy)(?:\sme)?\s+(.*)/i),s=function(e){function t(){var e=arguments.length<=0||void 0===arguments[0]?{}:arguments[0];o(this,t);var r=e.apiKey,n=i(this,(t.__proto__||Object.getPrototypeOf(t)).apply(this,arguments));return n.name="giphy",n.apiKey=r,n}return u(t,e),h(t,[{key:"register",value:function(e){b(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"register",this).apply(this,arguments),this.apiKey||e.log.critical("No apiKey passed to Giphy plugin; plugin will not work.")}},{key:"giphy",value:function(){function e(e){return t.apply(this,arguments)}var t=n(regeneratorRuntime.mark(function r(e){var t,n,o,i=y(e,2),u=i[1];return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.next=3,this.bot.http.get(v).query({q:u,api_key:this.apiKey});case 3:if(t=e.sent,n=t.body,o=n.data,!o.length){e.next=8;break}return e.abrupt("return",o[parseInt(Math.random()*o.length)].images.original.url);case 8:e.next=14;break;case 10:e.prev=10,e.t0=e["catch"](0),this.bot.log.notice("Error returned from Giphy request."),this.bot.log.debug(e.t0);case 14:case"end":return e.stop()}},r,this,[[0,10]])}));return e}()}]),t}(p.ChatPlugin),a(s.prototype,"giphy",[c,f,l],Object.getOwnPropertyDescriptor(s.prototype,"giphy"),s.prototype),s)}])});
+require("source-map-support").install();require("regenerator-runtime/runtime");
+(function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports) {
+
+module.exports = require("@exoplay/exobot");
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exoplay_exobot___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__);
+/* harmony export (binding) */ __webpack_require__.d(exports, "Giphy", function() { return Giphy; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || !1; descriptor.configurable = !0; if ("value" in descriptor) descriptor.writable = !0; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _dec2, _dec3, _desc, _value, _class, _class2, _temp;
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg), value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: !1, writable: !0, configurable: !0 } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
+  var desc = {};
+  Object['keys'](descriptor).forEach(function (key) {
+    desc[key] = descriptor[key];
+  });
+  desc.enumerable = !!desc.enumerable;
+  desc.configurable = !!desc.configurable;
+
+  if ('value' in desc || desc.initializer) {
+    desc.writable = !0;
+  }
+
+  desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+    return decorator(target, property, desc) || desc;
+  }, desc);
+
+  if (context && desc.initializer !== void 0) {
+    desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+    desc.initializer = void 0;
+  }
+
+  if (desc.initializer === void 0) {
+    Object['defineProperty'](target, property, desc);
+    desc = null;
+  }
+
+  return desc;
+}
+
+
+
+const ENDPOINT = 'http://api.giphy.com/v1/gifs/search';
+/* harmony export (immutable) */ exports["ENDPOINT"] = ENDPOINT;
+
+
+let Giphy = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["permissionGroup"])('gif'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["help"])('/gif <search> to search giphy for a gif'), _dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["respond"])(/^(?:gif|giphy)(?:\sme)?\s+(.*)/i), (_class = (_temp = _class2 = function (_ChatPlugin) {
+  _inherits(Giphy, _ChatPlugin);
+
+  function Giphy() {
+    _classCallCheck(this, Giphy);
+
+    return _possibleConstructorReturn(this, (Giphy.__proto__ || Object.getPrototypeOf(Giphy)).apply(this, arguments));
+  }
+
+  _createClass(Giphy, [{
+    key: 'giphy',
+    value: (() => {
+      var _ref = _asyncToGenerator(function* ([, search]) {
+        try {
+          const { body } = yield this.bot.http.get(ENDPOINT).query({ q: search, api_key: this.options.apiKey }),
+                { data } = body;
+
+          if (data.length) {
+            return data[parseInt(Math.random() * data.length)].images.original.url;
+          }
+        } catch (e) {
+          this.bot.log.notice('Error returned from Giphy request.');
+          this.bot.log.debug(e);
+        }
+      });
+
+      function giphy(_x) {
+        return _ref.apply(this, arguments);
+      }
+
+      return giphy;
+    })()
+  }]);
+
+  return Giphy;
+}(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["ChatPlugin"]), _class2.type = 'giphy', _class2.propTypes = {
+  apiKey: __WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["PropTypes"].string.isRequired
+}, _temp), (_applyDecoratedDescriptor(_class.prototype, 'giphy', [_dec, _dec2, _dec3], Object.getOwnPropertyDescriptor(_class.prototype, 'giphy'), _class.prototype)), _class));
+
+/***/ }
+/******/ ])));
 //# sourceMappingURL=giphy.js.map
