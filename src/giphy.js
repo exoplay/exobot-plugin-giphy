@@ -1,8 +1,8 @@
-import { ChatPlugin, respond, help, permissionGroup, PropTypes as T } from '@exoplay/exobot';
+import { Plugin, respond, help, permissionGroup, PropTypes as T } from '@exoplay/exobot';
 
 export const ENDPOINT = 'http://api.giphy.com/v1/gifs/search';
 
-export class Giphy extends ChatPlugin {
+export default class Giphy extends Plugin {
   static type = 'giphy';
 
   static propTypes = {
