@@ -69,20 +69,20 @@ require("source-map-support").install();require("regenerator-runtime/runtime");
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 module.exports = require("@exoplay/exobot");
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exoplay_exobot___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__);
-/* harmony export (binding) */ __webpack_require__.d(exports, "Giphy", function() { return Giphy; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || !1; descriptor.configurable = !0; if ("value" in descriptor) descriptor.writable = !0; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Giphy; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0, descriptor; i < props.length; i++) { descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || !1; descriptor.configurable = !0; if ("value" in descriptor) descriptor.writable = !0; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _dec, _dec2, _dec3, _desc, _value, _class, _class2, _temp;
 
@@ -126,11 +126,11 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 
 
 const ENDPOINT = 'http://api.giphy.com/v1/gifs/search';
-/* harmony export (immutable) */ exports["ENDPOINT"] = ENDPOINT;
+/* harmony export (immutable) */ __webpack_exports__["ENDPOINT"] = ENDPOINT;
 
 
-let Giphy = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["permissionGroup"])('gif'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["help"])('/gif <search> to search giphy for a gif'), _dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["respond"])(/^(?:gif|giphy)(?:\sme)?\s+(.*)/i), (_class = (_temp = _class2 = function (_ChatPlugin) {
-  _inherits(Giphy, _ChatPlugin);
+let Giphy = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["permissionGroup"])('gif'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["help"])('/gif <search> to search giphy for a gif'), _dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["respond"])(/^(?:gif|giphy)(?:\sme)?\s+(.*)/i), (_class = (_temp = _class2 = function (_Plugin) {
+  _inherits(Giphy, _Plugin);
 
   function Giphy() {
     _classCallCheck(this, Giphy);
@@ -155,19 +155,18 @@ let Giphy = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__exoplay_e
         }
       });
 
-      function giphy(_x) {
+      return function giphy() {
         return _ref.apply(this, arguments);
-      }
-
-      return giphy;
+      };
     })()
   }]);
 
   return Giphy;
-}(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["ChatPlugin"]), _class2.type = 'giphy', _class2.propTypes = {
+}(__WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["Plugin"]), _class2.type = 'giphy', _class2.propTypes = {
   apiKey: __WEBPACK_IMPORTED_MODULE_0__exoplay_exobot__["PropTypes"].string.isRequired
 }, _temp), (_applyDecoratedDescriptor(_class.prototype, 'giphy', [_dec, _dec2, _dec3], Object.getOwnPropertyDescriptor(_class.prototype, 'giphy'), _class.prototype)), _class));
 
-/***/ }
+
+/***/ })
 /******/ ])));
 //# sourceMappingURL=giphy.js.map
